@@ -6,6 +6,8 @@ DECLARE
    total integer := names.count;
 BEGIN
    dbms_output.put_line('Total: '|| total || ' Students');
+   
+   --In oracle environment, the starting index for varrays is always 1
    FOR i IN 1 .. total loop
       dbms_output.put_line(grades(i) || ' - ' || names(i));
    END LOOP;
