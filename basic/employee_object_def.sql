@@ -1,0 +1,12 @@
+CREATE OR REPLACE TYPE employee AS OBJECT
+  (ID NUMBER,
+  fname VARCHAR2(30),
+  lname VARCHAR2(30),
+  age NUMBER,
+  sex VARCHAR2(10),
+  email VARCHAR2(100),
+  address VARCHAR2(50),
+  MEMBER FUNCTION get_name RETURN VARCHAR2,
+  MEMBER FUNCTION validate_age RETURN VARCHAR2
+  );
+/
