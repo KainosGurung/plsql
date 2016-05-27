@@ -1,0 +1,62 @@
+Find the model number, speed and hard drive capacity for all the PCs with prices below $500. Result set: model, speed, hd.
+
+SELECT model, speed, hd 
+FROM pc 
+WHERE price < 500;
+
+-------------------------------------------------------------
+List all printer makers. Result set: maker.
+
+SELECT DISTINCT maker 
+FROM product  
+WHERE type = 'printer'
+
+-------------------------------------------------------------
+Find the model number, RAM and screen size of the laptops with prices over $1000.
+
+SELECT model, ram, screen 
+FROM laptop 
+WHERE price > 1000
+
+-------------------------------------------------------------
+Find all records FROM the Printer table containing data about color printers.
+
+Select * 
+FROM printer 
+WHERE color = 'y'
+
+-------------------------------------------------------------
+Find the model number, speed and hard drive capacity of PCs cheaper than $600 having a 12x or a 24x CD drive.
+
+Select model, speed, hd 
+FROM pc 
+WHERE price < 600 and (cd='12x' or cd='24x')
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+Get the makers who produce only one product type and more than one model. Output: maker, type.
+
+SELECT maker,
+       MAX(type) AS type
+FROM   product
+GROUP  BY maker
+HAVING COUNT(DISTINCT type) = 1
+       AND COUNT(model) > 1
+
+
+
+Get pairs of PC models with identical speeds and the same RAM capacity. Each resulting pair should be displayed only once, i.e. (i, j) but not (j, i). 
+Result set: model with the bigger number, model with the smaller number, speed, and RAM.
+
+Select b.model, a.model, a.speed, a.ram
+FROM pc a, pc b 
+WHERE a.speed = b.speed and a.ram = b.ram and a.model != b.model 
+group by b.model, a.model, a.speed, a.ram
+having a.model < b.model

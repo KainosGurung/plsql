@@ -1,0 +1,7 @@
+CREATE TABLE printer(
+  code NUMBER,
+  MODEL NUMBER,
+  color VARCHAR2(1),
+  TYPE VARCHAR2(10),
+  price NUMBER
+);

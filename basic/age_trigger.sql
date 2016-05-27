@@ -1,0 +1,7 @@
+CREATE OR REPLACE TRIGGER age_trigger
+BEFORE INSERT OR UPDATE OF age ON customers
+FOR EACH ROW
+WHEN (NEW.ID > 0)
+BEGIN
+  :NEW.age := :OLD.age + 1;
+END;
