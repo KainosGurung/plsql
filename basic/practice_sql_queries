@@ -33,14 +33,68 @@ FROM pc
 WHERE price < 600 and (cd='12x' or cd='24x')
 
 -------------------------------------------------------------
--------------------------------------------------------------
--------------------------------------------------------------
+For each maker producing laptops with a hard drive capacity of 10 Gb or higher, find the speed of such laptops. Result set: maker, speed.
+
+SELECT DISTINCT Product.maker, Laptop.speed
+FROM Product inner join Laptop  on product.model = laptop.model
+WHERE Laptop.hd >= 10
 
 -------------------------------------------------------------
--------------------------------------------------------------
--------------------------------------------------------------
--------------------------------------------------------------
+Find out the models and prices for all the products (of any type) produced by maker B.
 
+Select product.model, pc.price 
+from product inner join pc 
+on product.model = pc.model
+where product.maker = 'B'
+
+UNION
+
+Select product.model, laptop.price 
+from product inner join laptop 
+on product.model = laptop.model
+where product.maker = 'B'
+
+UNION
+
+Select product.model, Printer.price 
+from product inner join Printer 
+on product.model = Printer.model
+where product.maker = 'B'
+
+-------------------------------------------------------------
+Find the makers producing PCs but not laptops.
+
+select distinct maker from product where type = 'PC'
+Except
+select distinct maker from product where type = 'Laptop'
+
+-------------------------------------------------------------
+Find the makers of PCs with a processor speed of 450 MHz or more. Result set: maker.
+
+select distinct product.maker from product inner join pc on product.model = pc.model where speed >= 450
+
+-------------------------------------------------------------
+Find the printer models having the highest price. Result set: model, price.
+
+select model, price from printer where price = (
+select max(price) as price from printer)
+
+-------------------------------------------------------------
+Find out the average speed of PCs.
+
+Select avg(speed) from pc
+
+-------------------------------------------------------------
+Find out the average speed of the laptops priced over $1000.
+
+Select avg(speed) from laptop where price > 1000
+
+-------------------------------------------------------------
+Find out the average speed of the PCs produced by maker A.
+
+select avg(speed) from pc where model in (Select model from product where maker = 'A' and type = 'PC')
+
+-------------------------------------------------------------
 Get the makers who produce only one product type and more than one model. Output: maker, type.
 
 SELECT maker,
@@ -50,8 +104,12 @@ GROUP  BY maker
 HAVING COUNT(DISTINCT type) = 1
        AND COUNT(model) > 1
 
+-------------------------------------------------------------
+Get hard drive capacities that are identical for two or more PCs. Result set: hd.
 
+Select hd from pc group by hd having count(hd) >= 2
 
+-------------------------------------------------------------
 Get pairs of PC models with identical speeds and the same RAM capacity. Each resulting pair should be displayed only once, i.e. (i, j) but not (j, i). 
 Result set: model with the bigger number, model with the smaller number, speed, and RAM.
 
@@ -60,3 +118,18 @@ FROM pc a, pc b
 WHERE a.speed = b.speed and a.ram = b.ram and a.model != b.model 
 group by b.model, a.model, a.speed, a.ram
 having a.model < b.model
+
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+
+
+
+
+
