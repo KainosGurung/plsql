@@ -1,0 +1,86 @@
+Q1.
+DEPTID   DNAME                COUNT(F.FID)
+-------  -------------------- ------------
+ 1       Computer Sciences               2
+ 4       Education                       1
+ 2       Management                      2
+ 3       Medical Education               0
+ 5       Pharmacal Sciences              4
+
+
+
+Q2.
+       FID FNAME                    DEPTID
+---------- -------------------- ----------
+       104 S.Boling                      4
+
+
+
+
+Q3.
+
+SNAME                    DEPTID        AGE
+-------------------- ---------- ----------
+S.Jack                        1         19
+
+
+
+Q4.
+
+SNAME                    DEPTID
+-------------------- ----------
+E.Cho                         5
+G.Johnson                     1
+L.Lim                         1
+S.Jack                        1
+T.Banks                       3
+
+
+
+Q5.
+      SNUM
+----------
+      8016
+
+
+
+
+Q6.
+
+FNAME
+--------------------
+S.Boling
+
+
+
+
+Q7.
+    DEPTID AVG(S.AGE)
+---------- ----------
+         1         19
+         3         20
+         4          0
+         5         21
+
+
+
+Q8.
+    DEPTID SNAME                       AGE
+---------- -------------------- ----------
+         1 G.Johnson                    19
+
+
+
+
+Q9.
+      SNUM
+----------
+      8016
+      3726
+      4829
+      1234
+
+Q10.
+FNAME                COUNT(E.SNUM)
+-------------------- -------------
+S.Boling                         3

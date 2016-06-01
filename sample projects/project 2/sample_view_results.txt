@@ -1,0 +1,45 @@
+VIEW A:
+
+FNAME		     COUNT(C.CNAME)
+-------------------- --------------
+B.Jungles			  1
+C.Jason 			  0
+G.Mason 			  2
+I.Teach 			  0
+N.Guzaldo			  0
+S.Boling			  4
+S.Layton			  2
+S.Zwink 			  0
+Y.Walton			  0
+
+
+
+VIEW B:
+
+SNAME		     ROOM	TO_CH
+-------------------- ---------- -----
+A.Smith 	     U003	08:30
+B.Jungles	     R128	10:30
+E.Cho		     L108	01:30
+E.Cho		     R128	04:30
+E.Cho		     R128	09:30
+E.Cho		     U003	08:30
+G.Mason 	     L108	02:30
+G.Mason 	     R128	04:30
+L.Lim		     R128	09:30
+L.Lim		     U003	04:30
+S.Boling	     L108	01:30
+
+SNAME		     ROOM	TO_CH
+-------------------- ---------- -----
+S.Boling	     L108	11:30
+S.Boling	     R128	09:30
+S.Boling	     U003	08:30
+S.Jack		     L108	02:30
+S.Jack		     R128	04:30
+S.Jack		     R128	09:30
+S.Layton	     R128	09:30
+S.Layton	     U003	04:30
+T.Banks 	     L108	01:30
+T.Banks 	     L108	11:30
+T.Banks 	     U003	08:30

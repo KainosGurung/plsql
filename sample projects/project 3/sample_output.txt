@@ -1,0 +1,117 @@
+pro_department_report:
+
+Department: Computer Sciences
+Total number of students: 3
+-------------
+1. G.Johnson
+2. L.Lim
+3. S.Jack
+
+Department: Education
+Total number of students: 0
+-------------
+
+Department: Management
+Total number of students: 2
+-------------
+1. A.Smith
+2. D.Sharon
+
+Department: Medical Education
+Total number of students: 2
+-------------
+1. J.Bale
+2. T.Banks
+
+Department: Pharmacal Sciences
+Total number of students: 2
+-------------
+1. E.Cho
+2. M.Lee
+
+
+
+
+
+pro_student_stats:
+
+
+Student Name  # Classes
+------------  ---------
+A.Smith       1
+E.Cho         4
+L.Lim         2
+S.Jack        3
+T.Banks       3
+
+
+
+
+
+pro_faculty_stats:
+
+
+Faculty name  #Students:  0      >0,<=2  >2,<=4  >4,=<6  >6,<=8
+------------              ------ ------  ------  ------  ------
+B.Jungles                 X
+C.Jason                   X
+G.Mason                                  X
+I.Teach                   X
+N.Guzaldo                 X
+S.Boling                                                 X
+S.Layton                         X
+S.Zwink                   X
+Y.Walton                  X
+
+
+
+
+
+pro_histogram:
+
+Age | number of students
+18  | 1
+19  | 3
+20  | 3 <-- median
+21  | 0
+22  | 2
+
+
+
+
+
+pro_enroll:
+
+SNUM       CNAME
+---------- --------------------
+       418 CS448
+       418 MATH275
+       418 STAT110
+       671 ENG400
+      1234 COM100
+      1234 ENG400
+      1234 HIS210
+      5765 ENG320
+      5765 PHYS100
+      8016 ENG320
+      8016 ENG400
+      8016 HIS210
+      8016 STAT110
+      
+SNUM       CNAME
+---------- --------------------
+       418 CS448
+       418 MATH275
+       418 STAT110
+       671 ENG320
+       671 ENG400
+      1234 COM100
+      1234 ENG400
+      1234 HIS210
+      3726 CS448
+      5765 ENG320
+      5765 PHYS100
+      8016 ENG320
+      8016 ENG400
+      8016 HIS210
+      8016 STAT110
