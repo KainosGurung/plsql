@@ -25,15 +25,15 @@ insert into FACULTY values (107,'Y.Walton',5);
 insert into FACULTY values (108,'I.Teach',5);
 insert into FACULTY values (109,'C.Jason',5);
 
-insert into CLASS values ('ENG400',to_date('08:30','HH:MI'),'U003',104);
-insert into CLASS values ('ENG320', to_date('09:30','HH:MI'),'R128',104);
-insert into CLASS values ('COM100', to_date('11:30','HH:MI'),'L108',104);
-insert into CLASS values ('ME308', to_date('10:30','HH:MI'),'R128',102);
-insert into CLASS values ('CS448', to_date('09:30','HH:MI'),'R128',101);
-insert into CLASS values ('HIS210', to_date('01:30','HH:MI'),'L108',104);
-insert into CLASS values ('MATH275', to_date('02:30','HH:MI'),'L108',105);
-insert into CLASS values ('STAT110', to_date('04:30','HH:MI'),'R128',105);
-insert into CLASS values ('PHYS100', to_date('04:30','HH:MI'),'U003',101);
+insert into class values ('ENG400',to_timestamp('08:30','HH:MI'),'U003',104);
+insert into class values ('ENG320', to_timestamp('09:30','HH:MI'),'R128',104);
+insert into class values ('COM100', to_timestamp('11:30','HH:MI'),'L108',104);
+insert into class values ('ME308', to_timestamp('10:30','HH:MI'),'R128',102);
+insert into class values ('CS448', to_timestamp('09:30','HH:MI'),'R128',101);
+insert into class values ('HIS210', to_timestamp('01:30','HH:MI'),'L108',104);
+insert into class values ('MATH275', to_timestamp('02:30','HH:MI'),'L108',105);
+insert into class values ('STAT110', to_timestamp('04:30','HH:MI'),'R128',105);
+insert into CLASS values ('PHYS100', to_timestamp('04:30','HH:MI'),'U003',101);
 
 insert into ENROLLED values (0418,'CS448');
 insert into ENROLLED values (0418,'MATH275');
