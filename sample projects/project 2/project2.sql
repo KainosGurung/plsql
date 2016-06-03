@@ -105,6 +105,28 @@ select * from enrolled where cname in (
 select cname from (select cname, count(cname) as cnt from enrolled group by cname) where cnt > 1);
 
 
+--select snum from enrolled a where snum in ( select snum ,count(cname) from enrolled b where a.cname=b.cname group by cname having co
+
+select cname from enrolled group by cname having count(cname) > 3;
+SELECT snum, count(1) FROM enrolled GROUP BY snum HAVING count(1) > 3;
+
+8016, 5765
+5765, 8016
+1234, 8016
+1234, 671
+8016, 1234
+8016, 671
+671, 8016
+671, 1234
+8016,1234
+1234, 8016
+8016, 418
+418, 8016
+
+
+
+
+
 
 --Print the names of (distinct) faculty who teach 2 or more classes in
 --the same room
