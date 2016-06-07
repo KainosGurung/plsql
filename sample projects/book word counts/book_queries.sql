@@ -51,7 +51,7 @@ FROM
   GROUP BY wordid
   ORDER BY word_count DESC
   )
-WHERE rownum <= 8;
+WHERE rownum <= 40;
 
 
 --How many unique words are there per author? How many unique words are there per editor?
@@ -146,4 +146,19 @@ FROM
     )
   WHERE ROWNUM <= 20
   );
+
+--Taking stopwords from the m_stopwords table into account, write an SQL query that selects
+--THE top 20 most frequently occurring words across ALL books, i.e., IGNORE stopwords. be sure
+--you do NOT DELETE OR CHANGE ANY OF THE existing TABLES OR their DATA (i.e, do NOT simply DELETE
+--stopwords from m_wordcounts).
+SELECT *
+FROM
+  (SELECT wordid,
+    SUM(COUNT) AS word_count
+  FROM m_wordcounts
+  where wordid not in (select wordid from m_stopwords)
+  GROUP BY wordid
+  ORDER BY word_count DESC
+  )
+WHERE rownum <= 20;
 
